@@ -1,12 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aadvait Hirde</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Hi! I'm Aadvait</h1>
-    <p>This is my personal website</p>
+    <div class="site-main-wrapper">
+        <button class="hamburger">
+            <img src="./images/hamburger.svg" alt="">
+        </button>
+
+        <div class="mobile-nav">
+            <button class="times"><img src="./images/times.svg" alt=""></button>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <header>
+            <div class="container">
+                <nav id="main-nav">
+                    <div class="left flex items-center">
+                        <div>
+                            <a href="#about">About</a>
+                            <a href="#experience">Experience</a>
+                            <a href="#projects">Projects</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="hero flex items-center justify-between">
+                    <div class="left flex-1 flex justify-center">
+                        <img src="./images/me.jpeg" alt="">
+                    </div>
+                    <div class="right flex-1">
+                        <h6>Hey there!</h6>
+                        <h1>I'm <span>Aadvait Hirde</span></h1>
+                        <p>I am a Computer Science and Business  student with an avid interest in Machine Learning and Full Stack Web Development. 
+                            My curiosity drives me to explore the intricacies of technology and its endless possibilities. 
+                            I thrive on challenges and am always eager to learn and grow, both professionally and personally.</p>
+                        <div>
+                            <button id="downloadButton" class="btn btn-secondary" onclick="downloadFile('/assets/Resume.pdf', 'Aadvait-Hirde-CV')">Download CV</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="about" class="about">
+            <div class="container flex items-center about-inner-wrap">
+                <div class="flex-1">
+                    <img class="about-me-img" src="./images/me-2.jpeg" alt="">
+                </div>
+                <div class="flex-1 right">
+                    <h1>About <span>Me</span></h1>
+                    <p>My journey in tech has been marked by a diverse set of experiences. 
+                        I have ventured into the innovative world of Augmented Reality, specifically focusing on indoor navigation projects. 
+                        I've also published a research paper on using transformers and deep learning with stance detection to forecast cryptocurrency price movement. 
+                        In terms of raw coding, I possess a strong foundational knowledge in programming languages such as Flutter, Dart, Java, Python, C++, and I've honed my skills in web development with HTML, CSS, JavaScript and the MERN stack alongside machine learning.
+                        As a future tech professional, I am excited about the opportunity to merge my technical abilities with my business acumen to make an impact in the field. 
+                        I am always on the lookout for collaborative projects, research prospects, internships, or conversations that can broaden my understanding and experience in this ever-evolving industry.
+                    </p>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/aadvait-hirde/" target="_blank"><img src="./images/linkedin.svg" alt=""></a>
+                        <a href="https://github.com/Aadvait-Hirde" target="_blank"> <img src="./images/github.svg" alt=""></a>
+                        <a href="mailto:aadvait.cr@gmail.com" target="_blank"> <img src="./images/gmail.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="experience" class="experience">
+            <div class="container">
+                <h1 class="section-heading"><span>My </span>Experience</h1>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <img src="./images/MLE.png" height="100px" width="100px" alt="">
+                        <h2>President of the Machine Learning in Econometrics Club</h2>
+                        <p>Working on leading a team of 50+ students in exploring cutting-edge applications of machine learning algorithms to economic modeling, organizing weekly workshops, hosting industry speakers, and spearheading a successful annual hackathon that aims to attract 200+ participants from top universities.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <img src="./images/mycaptain.png" alt="" height="100px" width="100px">
+                        <h2>Software Development Intern at MyCaptain</h2>
+                        <p>Developed MERN stack web app boosting user engagement 15% for 50,000 daily users. 
+                            Built an ML model with Python/scikit-learn for targeted marketing and implemented RESTful API using Express.js, MongoDB for integrations. 
+                            Created Python data pipeline using Pandas and NumPy to increase efficiency by 40%.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="projects">
+            <div class="container">
+                <h1 class="section-heading"><span>My</span> Projects</h1>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="./images/locus.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <a href="#">
+                                <h1>The Locus App</h1>
+                            </a>
+                            <span>Aug 2022 - Nov 2022</span>
+                            <p>Locus is an AR-based indoor navigation app. I implemented C# scripts for AR interactions, object placement, and UI management. 
+                                The project integrated AR Foundation, ARCore, and ARKit modules for Android and iOS platforms, leveraging Depth APIs for accurate AR projections.
+                                A QR code-based tracking system was designed, where each code corresponded to a specific location, updating the user's position in the Unity model upon scanning. 
+                                Unity's scene management was utilized to create a scale model of the campus, assigning navigation targets to each classroom.
+                                Using this, real-time indoor pathfinding was enabled by rendering AR and minimap lines from the user's location to the destination.</p>
+                            <a href="https://www.khaleejtimes.com/schooling-in-uae/dubai-khda-school-inspections-go-high-tech-thanks-to-apps-built-by-students" target="_blank">Read More on Khaleej Times</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="./images/ml.png" alt="">
+                        </div>
+                        <div class="card-content">
+                            <a href="#">
+                                <h1>BLAST AI Research Paper</h1>
+                            </a>
+                            <span>Jun 2022 - Nov 2022</span>
+                            <p>
+                                I developed a stance detection model using the RoBERTa transformer for analyzing tweet sentiment towards Bitcoin, achieving an 80% accuracy rate. 
+                                Additionally, I implemented an LSTM-based Recurrent Neural Network (RNN) for Bitcoin price forecasting, with a mean absolute error of $1144.85 over a 5-day span.
+                                For sentiment analysis, logistic regression was applied, yielding a 78% accuracy rate. 
+                                Sklearn was used for data preprocessing and model evaluation, while the Huggingface library facilitated access to pre-trained transformer models.
+                                In training the RNN, the Adam optimizer was employed, and suggestions were made for future hyperparameter tuning using GridSearchCV and Bayesian optimization techniques.</p>
+                            <a href="https://ieeexplore.ieee.org/document/9953018">Read More on IEEE</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h1 class="section-heading">Contact <span>Me</span></h1>
+                <form action="https://formsubmit.co/aadvait.cr@gmail.com" method="POST">
+                    <div class="input-wrap">
+                        <input type="text" name="name" placeholder="Name">
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="input-wrap-2">
+                        <input type="text" name="subject" placeholder="Subject">
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                    </div>
+                    <div class="btn-wrapper">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </form>
+                <script>
+                    function runCode(e) {
+                        e.preventDefault();
+                    }
+                </script>
+            </div>
+        </section>
+        <footer>
+            <div class="copyright">
+                Copyright 2024 © Aadvait Hirde
+            </div>
+        </footer>
+    </div>
+    <script>
+        function downloadFile(url, fileName) {
+        var link = document.createElement('a');
+        link.href = url;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        }
+    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
