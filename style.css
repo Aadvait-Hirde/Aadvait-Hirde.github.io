@@ -544,14 +544,15 @@ section.resume canvas {
 .main-nav {
     padding: 2rem;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 2rem;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -808,7 +809,7 @@ section.resume canvas {
 
 /* Resume page styles */
 .resume-container {
-    max-width: 1500px;
+    max-width: 1fr;
     margin: 2rem auto;
     padding: 0 2rem;
 }
@@ -816,7 +817,7 @@ section.resume canvas {
 .resume-container embed {
     border: 1px solid #ddd;
     border-radius: 8px;
-    height: 1125px;
+    height: 1fr;
 }
 
 .pdf-controls {
@@ -963,5 +964,50 @@ section.resume canvas {
 
     .about-me-img {
         width: 250px;
+    }
+}
+
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+}
+
+.hamburger-menu img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        position: fixed;
+        right: 2rem;
+        top: 2rem;
+        z-index: 100;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        z-index: 99;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 }

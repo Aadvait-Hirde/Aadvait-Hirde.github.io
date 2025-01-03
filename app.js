@@ -1,22 +1,22 @@
-$(document).ready(function(){
-$('.slider').slick({
-    arrows:false,
-    dots:true,
-    appendDots:'.slider-dots',
-    dotsClass:'dots'
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
 
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
 
-let hamburger = document.querySelector('.hamburger');
-let times = document.querySelector('.times');
-let mobileNav = document.querySelector('.mobile-nav');
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
 
-hamburger.addEventListener('click', function(){
-  mobileNav.classList.add('open');  
-});
-
-times.addEventListener('click', function(){
-    mobileNav.classList.remove('open');  
-});
-
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            navLinks.classList.remove('active');
+        }
+    });
 });
